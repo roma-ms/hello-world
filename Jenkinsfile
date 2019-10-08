@@ -18,18 +18,9 @@ pipeline {
         }
       }
     }
-    stage('test2') {
-      parallel {
-        stage('test2') {
-          steps {
-            echo 'i hope am getting this'
-          }
-        }
-        stage('') {
-          steps {
-            mail(subject: 'test', body: 'test', from: 'holuwande@gmail.com', to: 'holuwande@yahoo.co.uk')
-          }
-        }
+    stage('error') {
+      steps {
+        mail(subject: 'test', body: 'test', from: 'holuwande@gmail.com', to: 'holuwande@yahoo.co.uk')
       }
     }
   }
