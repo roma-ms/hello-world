@@ -18,11 +18,6 @@ pipeline {
         }
       }
     }
-    stage('error') {
-      steps {
-        mail(subject: 'test', body: 'test', from: 'holuwande@gmail.com', to: 'holuwande@yahoo.co.uk')
-      }
-    }
   }
   environment {
     username = 'ari'
